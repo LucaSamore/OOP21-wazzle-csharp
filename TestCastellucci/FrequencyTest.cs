@@ -15,7 +15,6 @@ namespace TestCastellucci
         private readonly IDataset _dataset = DatasetReader.ReadDataset($"..{SEPARATOR}..{SEPARATOR}testDictionary.txt");
         private readonly IDictionary<char, double> _dictionary = new Dictionary<char, double>();
         
-
         [TestMethod]
         public void TestFrequency()
         {

@@ -29,6 +29,11 @@ namespace OOP21_wazzle_csharp
         /// <returns> the suggested words. </returns>
         static Func<ISet<string>, ISet<string>> WordBonus() => s => ExtractWords(s);
 
+        /// <summary>
+        /// Extract 3 words to suggest.
+        /// </summary>
+        /// <param name="words"> the words given for the extraction </param>
+        /// <returns></returns>
         private static ISet<string> ExtractWords(ISet<string> words)
         {
             var random = new Random();

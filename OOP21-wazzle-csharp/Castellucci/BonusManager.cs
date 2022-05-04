@@ -27,6 +27,42 @@ namespace OOP21_wazzle_csharp
         }
 
         /// <summary>
+        /// Updates the ScoreBonus quantity.
+        /// </summary>
+        /// <param name="operation"> the operation that must be done when the ScoreBonus is used by the user. </param>
+        public void UpdateScoreBonusQuantity(Func<int, int> operation) => _scoreBonus.UpdateQuantity(operation);
+
+        /// <summary>
+		/// Updates the TimeBonus quantity.
+		/// </summary>
+		/// <param name="operation"> the operation that must be done when the TimeBonus is used by the user. </param>
+        public void UpdateTimeBonusQuantity(Func<int, int> operation) => _timeBonus.UpdateQuantity(operation);
+
+        /// <summary>
+		/// Updates the WordBonus quantity.
+		/// </summary>
+		/// <param name="operation"> the operation that must be done when the WordBonus is used by the user. </param>
+        public void UpdateWordBonusQuantity(Func<int, int> operation) => _wordBonus.UpdateQuantity(operation);
+
+        /// <summary>
+        /// Gives the quantity of ScoreBonus.
+        /// </summary>
+        /// <returns> the quantity of ScoreBonus available. </returns>
+        public int GetScoreBonusQuantity() => _scoreBonus.Quantity;
+
+        /// <summary>
+		/// Gives the quantity of TimeBonus.
+		/// </summary>
+		/// <returns> the quantity of TimeBonus available. </returns>
+        public int GetTimeBonusQuantity() => _timeBonus.Quantity;
+
+        /// <summary>
+		/// Gives the quantity of WordBonus.
+		/// </summary>
+		/// <returns> the quantity of WordBonus available. </returns>
+        public int GetWordBonusQuantity() => _wordBonus.Quantity;
+
+        /// <summary>
 		/// Apply the implications of the ScoreBonus.
 		/// </summary>
 		/// <param name="currentTime"></param>
@@ -59,6 +95,10 @@ namespace OOP21_wazzle_csharp
             return _wordBonus.Apply(toFoundWords);
         }
 
+        /// <summary>
+		/// Extract randomly a bonus.
+		/// </summary>
+		/// <returns> the extracted bonus. </returns>
         public string ExtractBonus()
         {
             var extractedBonus = extracter().GetType();
@@ -79,42 +119,6 @@ namespace OOP21_wazzle_csharp
             }
             return ""; 
         }
-
-        /// <summary>
-        /// Gives the quantity of ScoreBonus.
-        /// </summary>
-        /// <returns> the quantity of ScoreBonus available. </returns>
-        public int GetScoreBonusQuantity() => _scoreBonus.Quantity;
-
-        /// <summary>
-		/// Gives the quantity of TimeBonus.
-		/// </summary>
-		/// <returns> the quantity of TimeBonus available. </returns>
-        public int GetTimeBonusQuantity() => _timeBonus.Quantity;
-
-        /// <summary>
-		/// Gives the quantity of WordBonus.
-		/// </summary>
-		/// <returns> the quantity of WordBonus available. </returns>
-        public int GetWordBonusQuantity() => _wordBonus.Quantity;
-
-        /// <summary>
-		/// Updates the ScoreBonus quantity.
-		/// </summary>
-		/// <param name="operation"> the operation that must be done when the ScoreBonus is used by the user. </param>
-        public void UpdateScoreBonusQuantity(Func<int, int> operation) => _scoreBonus.UpdateQuantity(operation);
-
-        /// <summary>
-		/// Updates the TimeBonus quantity.
-		/// </summary>
-		/// <param name="operation"> the operation that must be done when the TimeBonus is used by the user. </param>
-        public void UpdateTimeBonusQuantity(Func<int, int> operation) => _timeBonus.UpdateQuantity(operation);
-
-        /// <summary>
-		/// Updates the WordBonus quantity.
-		/// </summary>
-		/// <param name="operation"> the operation that must be done when the WordBonus is used by the user. </param>
-        public void UpdateWordBonusQuantity(Func<int, int> operation) => _wordBonus.UpdateQuantity(operation);
 
         /// <summary>
         /// Extract randomly a bonus.
