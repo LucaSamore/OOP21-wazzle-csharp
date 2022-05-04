@@ -1,21 +1,21 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 using OOP21_wazzle_csharp.Castellucci;
+using OOP21_wazzle_csharp.Samore;
 using System;
 using System.Collections.Generic;
-using System.Text;
 using System.IO;
-using OOP21_wazzle_csharp.Samore;
+using System.Text;
 
-namespace TestCastellucci
+namespace OOP21_wazzle_csharp.Castellucci.Tests
 {
-    [TestClass]
-    class FrequencyTest
+    [TestClass()]
+    public sealed class FrequencyTest
     {
         private static readonly char SEPARATOR = Path.DirectorySeparatorChar;
-        private readonly IDataset _dataset = DatasetReader.ReadDataset($"..{SEPARATOR}..{SEPARATOR}testDictionary.txt");
+        private readonly IDataset _dataset = DatasetReader.ReadDataset($"..{SEPARATOR}..{SEPARATOR}..{SEPARATOR}testDictionary.txt");
         private readonly IDictionary<char, double> _dictionary = new Dictionary<char, double>();
-        
-        [TestMethod]
+
+        [TestMethod()]
         public void TestFrequency()
         {
             _dictionary.Add('A', 0.3125);

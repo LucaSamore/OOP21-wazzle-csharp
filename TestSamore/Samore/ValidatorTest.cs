@@ -10,18 +10,18 @@ namespace TestSamore.Samore
     public sealed class ValidatorTest
     {
         private static readonly char SEPARATOR = Path.DirectorySeparatorChar;
-        private readonly IDataset dataset = DatasetReader.ReadDataset($"..{SEPARATOR}..{SEPARATOR}..{SEPARATOR}dataset.txt");
-        private readonly Difficulty easy4x4 = new Difficulty(DifficultyNames.EASY, 4, 76, 200, 240_000L);
-        private readonly Difficulty hard4x4 = new Difficulty(DifficultyNames.HARD, 4, 25, 75, 180_000L);
-        private readonly Difficulty easy5x5 = new Difficulty(DifficultyNames.EASY, 5, 151, 250, 240_000L);
-        private readonly Difficulty hard5x5 = new Difficulty(DifficultyNames.HARD, 5, 100, 150, 180_000L);
-        private readonly Difficulty easy6x6 = new Difficulty(DifficultyNames.EASY, 6, 226, 350, 240_000L);
-        private readonly Difficulty hard6x6 = new Difficulty(DifficultyNames.HARD, 6, 150, 225, 180_000L);
+        private readonly IDataset _dataset = DatasetReader.ReadDataset($"..{SEPARATOR}..{SEPARATOR}..{SEPARATOR}dataset.txt");
+        private readonly Difficulty _easy4x4 = new Difficulty(DifficultyNames.EASY, 4, 76, 200, 240_000L);
+        private readonly Difficulty _hard4x4 = new Difficulty(DifficultyNames.HARD, 4, 25, 75, 180_000L);
+        private readonly Difficulty _easy5x5 = new Difficulty(DifficultyNames.EASY, 5, 151, 250, 240_000L);
+        private readonly Difficulty _hard5x5 = new Difficulty(DifficultyNames.HARD, 5, 100, 150, 180_000L);
+        private readonly Difficulty _easy6x6 = new Difficulty(DifficultyNames.EASY, 6, 226, 350, 240_000L);
+        private readonly Difficulty _hard6x6 = new Difficulty(DifficultyNames.HARD, 6, 150, 225, 180_000L);
 
         [TestMethod()]
         public void TestEasy4x4()
         {
-            var validator = new GridValidator(dataset, easy4x4);
+            var validator = new GridValidator(_dataset, _easy4x4);
 
             //this set of letters is not valid [68 words]
             var wrongLetters = new HashSet<ILetter>()
@@ -77,7 +77,7 @@ namespace TestSamore.Samore
         [TestMethod()]
         public void TestHard4x4()
         {
-            var validator = new GridValidator(dataset, hard4x4);
+            var validator = new GridValidator(_dataset, _hard4x4);
 
             //this set of letters is not valid [88 words]
             var wrongLetters = new HashSet<ILetter>()
@@ -133,7 +133,7 @@ namespace TestSamore.Samore
         [TestMethod()]
         public void TestEasy5x5()
         {
-            var validator = new GridValidator(dataset, easy5x5);
+            var validator = new GridValidator(_dataset, _easy5x5);
 
             //this set of letters is not valid [81 words]
             var wrongLetters = new HashSet<ILetter>()
@@ -207,7 +207,7 @@ namespace TestSamore.Samore
         [TestMethod()]
         public void TestHard5x5()
         {
-            var validator = new GridValidator(dataset, hard5x5);
+            var validator = new GridValidator(_dataset, _hard5x5);
 
             //this set of letters is not valid [81 words]
             var wrongLetters = new HashSet<ILetter>()
@@ -281,7 +281,7 @@ namespace TestSamore.Samore
         [TestMethod()]
         public void TestEasy6x6()
         {
-            var validator = new GridValidator(dataset, easy6x6);
+            var validator = new GridValidator(_dataset, _easy6x6);
 
             //this set of letters is not valid [92 words]
             var wrongLetters = new HashSet<ILetter>()
@@ -378,7 +378,7 @@ namespace TestSamore.Samore
         public void TestHard6x6()
         {
             //150 -225
-            var validator = new GridValidator(dataset, hard6x6);
+            var validator = new GridValidator(_dataset, _hard6x6);
 
             //this set of letters is not valid [92 words]
             var wrongLetters = new HashSet<ILetter>()

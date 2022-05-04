@@ -1,18 +1,16 @@
-using Microsoft.VisualStudio.TestTools.UnitTesting;
-using OOP21_wazzle_csharp.Castellucci;
+﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System.Collections.Generic;
 
-namespace TestCastellucci
+namespace OOP21_wazzle_csharp.Castellucci.Tests
 {
-    [TestClass]
-    public class LetterChooserTest
+    [TestClass()]
+    public sealed class BonusTest
     {
-        private readonly BonusManager _bonusManager = new BonusManager();
+		private readonly BonusManager _bonusManager = new BonusManager();
 
-        [TestMethod]
+		[TestMethod()]
         public void TestBonuses()
         {
-
 			//ScoreBonus
 			_bonusManager.UpdateScoreBonusQuantity(b => b + 1);
 			Assert.AreEqual(_bonusManager.GetScoreBonusQuantity(), 1);
@@ -26,7 +24,7 @@ namespace TestCastellucci
 			Assert.AreEqual(_bonusManager.GetWordBonusQuantity(), 3);
 			_bonusManager.UpdateWordBonusQuantity(b => b - 1);
 			Assert.AreEqual(_bonusManager.GetWordBonusQuantity(), 2);
-			ISet<string> toFoundWords = new HashSet<string>(){ "cane", "gatto", "topo", "ape", "libellula", "rana"};
+			ISet<string> toFoundWords = new HashSet<string>() { "cane", "gatto", "topo", "ape", "libellula", "rana" };
 			ISet<string> suggestion = _bonusManager.ApplyWordBonus(toFoundWords);
 			Assert.IsTrue(suggestion.IsSubsetOf(toFoundWords));
 			Assert.AreEqual(suggestion.Count, 3);
@@ -47,7 +45,6 @@ namespace TestCastellucci
 			int finalQuantity = _bonusManager.GetScoreBonusQuantity() + _bonusManager.GetWordBonusQuantity()
 			  + _bonusManager.GetTimeBonusQuantity();
 			Assert.AreEqual(1, finalQuantity - startQuantity);
-
 		}
-	}
+    }
 }

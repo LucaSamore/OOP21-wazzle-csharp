@@ -10,18 +10,18 @@ namespace TestSamore.Samore
     public sealed class GeneratorTest
     {
         private static readonly char SEPARATOR = Path.DirectorySeparatorChar;
-        private readonly IDataset dataset = DatasetReader.ReadDataset($"..{SEPARATOR}..{SEPARATOR}..{SEPARATOR}dataset.txt");
-        private readonly Difficulty easy4x4 = new Difficulty(DifficultyNames.EASY, 4, 76, 200, 240_000L);
-        private readonly Difficulty hard4x4 = new Difficulty(DifficultyNames.HARD, 4, 25, 75, 180_000L);
-        private readonly Difficulty easy5x5 = new Difficulty(DifficultyNames.EASY, 5, 151, 250, 240_000L);
-        private readonly Difficulty hard5x5 = new Difficulty(DifficultyNames.HARD, 5, 100, 150, 180_000L);
-        private readonly Difficulty easy6x6 = new Difficulty(DifficultyNames.EASY, 6, 226, 350, 240_000L);
-        private readonly Difficulty hard6x6 = new Difficulty(DifficultyNames.HARD, 6, 150, 225, 180_000L);
+        private readonly IDataset _dataset = DatasetReader.ReadDataset($"..{SEPARATOR}..{SEPARATOR}..{SEPARATOR}dataset.txt");
+        private readonly Difficulty _easy4x4 = new Difficulty(DifficultyNames.EASY, 4, 76, 200, 240_000L);
+        private readonly Difficulty _hard4x4 = new Difficulty(DifficultyNames.HARD, 4, 25, 75, 180_000L);
+        private readonly Difficulty _easy5x5 = new Difficulty(DifficultyNames.EASY, 5, 151, 250, 240_000L);
+        private readonly Difficulty _hard5x5 = new Difficulty(DifficultyNames.HARD, 5, 100, 150, 180_000L);
+        private readonly Difficulty _easy6x6 = new Difficulty(DifficultyNames.EASY, 6, 226, 350, 240_000L);
+        private readonly Difficulty _hard6x6 = new Difficulty(DifficultyNames.HARD, 6, 150, 225, 180_000L);
 
         [TestMethod()]
         public void TestEasy4x4()
         {
-            var generator = new GridGenerator(dataset, easy4x4)
+            var generator = new GridGenerator(_dataset, _easy4x4)
             {
                 Letters = new HashSet<ILetter>()
                 {
@@ -52,7 +52,7 @@ namespace TestSamore.Samore
         [TestMethod()]
         public void TestHard4x4()
         {
-            var generator = new GridGenerator(dataset, hard4x4)
+            var generator = new GridGenerator(_dataset, _hard4x4)
             {
                 Letters = new HashSet<ILetter>()
                 {
@@ -83,7 +83,7 @@ namespace TestSamore.Samore
         [TestMethod()]
         public void TestEasy5x5()
         {
-            var generator = new GridGenerator(dataset, easy5x5)
+            var generator = new GridGenerator(_dataset, _easy5x5)
             {
                 Letters = new HashSet<ILetter>()
                 {
@@ -123,7 +123,7 @@ namespace TestSamore.Samore
         [TestMethod()]
         public void TestHard5x5()
         {
-            var generator = new GridGenerator(dataset, hard5x5)
+            var generator = new GridGenerator(_dataset, _hard5x5)
             {
                 Letters = new HashSet<ILetter>()
                 {
@@ -163,7 +163,7 @@ namespace TestSamore.Samore
         [TestMethod()]
         public void TestEasy6x6()
         {
-            var generator = new GridGenerator(dataset, easy6x6)
+            var generator = new GridGenerator(_dataset, _easy6x6)
             {
                 Letters = new HashSet<ILetter>()
                 {
@@ -214,7 +214,7 @@ namespace TestSamore.Samore
         [TestMethod()]
         public void TestHard6x6()
         {
-            var generator = new GridGenerator(dataset, hard6x6)
+            var generator = new GridGenerator(_dataset, _hard6x6)
             {
                 Letters = new HashSet<ILetter>()
                 {
