@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.31911.196
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OOP21-wazzle-csharp", "OOP21-wazzle-csharp\OOP21-wazzle-csharp.csproj", "{70528CE3-2566-40BB-AAF9-0DCCA0286CAF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OOP21-wazzle-csharp", "OOP21-wazzle-csharp\OOP21-wazzle-csharp.csproj", "{70528CE3-2566-40BB-AAF9-0DCCA0286CAF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestCastellucci", "TestCastellucci\TestCastellucci.csproj", "{22B3E80F-26F7-4682-B2B7-8E2F81B06BB0}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{70528CE3-2566-40BB-AAF9-0DCCA0286CAF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{70528CE3-2566-40BB-AAF9-0DCCA0286CAF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{70528CE3-2566-40BB-AAF9-0DCCA0286CAF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{22B3E80F-26F7-4682-B2B7-8E2F81B06BB0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{22B3E80F-26F7-4682-B2B7-8E2F81B06BB0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{22B3E80F-26F7-4682-B2B7-8E2F81B06BB0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{22B3E80F-26F7-4682-B2B7-8E2F81B06BB0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
