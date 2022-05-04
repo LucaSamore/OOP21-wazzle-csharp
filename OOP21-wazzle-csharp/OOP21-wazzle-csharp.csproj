@@ -6,4 +6,8 @@
     <RootNamespace>OOP21_wazzle_csharp</RootNamespace>
   </PropertyGroup>
 
+  <ItemGroup>
+    <Folder Include="Samore\" />
+  </ItemGroup>
+
 </Project>
