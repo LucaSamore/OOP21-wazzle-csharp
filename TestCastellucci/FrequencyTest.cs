@@ -3,8 +3,8 @@ using OOP21_wazzle_csharp.Castellucci;
 using System;
 using System.Collections.Generic;
 using System.Text;
-using WazzleLuca;
 using System.IO;
+using OOP21_wazzle_csharp.Samore;
 
 namespace TestCastellucci
 {
@@ -25,8 +25,8 @@ namespace TestCastellucci
             _dictionary.Add('E', 0.0625);
             _dictionary.Add('(', 0.0625);
             var weightedAlphabet = new WeightedAlphabet(_dictionary);
-            var _frequency = new Frequency(_dataset);
-            Assert.AreEqual(_dictionary, _frequency.ComputeFrequency().WeightedAlphabetMap);
+            var frequency = new Frequency(_dataset);
+            Assert.AreEqual(_dictionary, frequency.ComputeFrequency().WeightedAlphabetMap);
         }
     }
 }

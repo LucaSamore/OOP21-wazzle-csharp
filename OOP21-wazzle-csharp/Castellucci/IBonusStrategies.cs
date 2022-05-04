@@ -3,7 +3,7 @@ using System.Linq;
 using System.Collections.Generic;
 using System.Text;
 
-namespace OOP21_wazzle_csharp
+namespace OOP21_wazzle_csharp.Castellucci
 {
     /// <summary>
     /// This interface provides methods for giving each bonus a strategy.

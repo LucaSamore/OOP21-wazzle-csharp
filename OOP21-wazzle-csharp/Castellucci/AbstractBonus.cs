@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace OOP21_wazzle_csharp
+namespace OOP21_wazzle_csharp.Castellucci
 {
     /// <summary>
     /// This abstract class offers an abstraction for all the Bonuses.

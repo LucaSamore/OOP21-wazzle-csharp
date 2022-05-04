@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace WazzleLuca
+namespace OOP21_wazzle_csharp.Samore
 {
     /// <summary>
     /// Represents an interface for modeling a Letter object.

@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
 
-namespace WazzleLuca
+namespace OOP21_wazzle_csharp.Samore
 {
     public sealed class GridValidator : IGridValidator
     {

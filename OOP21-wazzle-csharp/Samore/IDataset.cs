@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace WazzleLuca
+namespace OOP21_wazzle_csharp.Samore
 {
     /// <summary>
     /// An interface for modeling the dataset.

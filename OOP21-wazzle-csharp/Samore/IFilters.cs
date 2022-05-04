@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 
-namespace WazzleLuca
+namespace OOP21_wazzle_csharp.Samore
 {
     /// <summary>
     /// This interface provides a set of static methods that can be used to perform filter operations on a set of Letter objects

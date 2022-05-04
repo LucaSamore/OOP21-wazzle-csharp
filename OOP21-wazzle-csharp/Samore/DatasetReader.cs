@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.IO;
 
-namespace WazzleLuca
+namespace OOP21_wazzle_csharp.Samore
 {
     public sealed class DatasetReader
     {

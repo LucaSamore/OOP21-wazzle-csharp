@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 using System.Linq;
-using WazzleLuca;
+using OOP21_wazzle_csharp.Samore;
 
 namespace OOP21_wazzle_csharp.Castellucci
 {

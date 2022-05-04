@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace WazzleLuca
+namespace OOP21_wazzle_csharp.Samore
 {
     /// <summary>
     /// Represents an interface for modeling a grid object. A grid contains a set of Letter objects

@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace WazzleLuca
+namespace OOP21_wazzle_csharp.Samore
 {
     public sealed class Letter : ILetter
     {

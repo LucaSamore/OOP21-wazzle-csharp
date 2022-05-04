@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace WazzleLuca
+namespace OOP21_wazzle_csharp.Samore
 {
     /// <summary>
     /// This interface provides a method for validating the quality of a given set of Letter objects.

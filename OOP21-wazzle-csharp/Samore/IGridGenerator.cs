@@ -1,4 +1,4 @@
-﻿namespace WazzleLuca
+﻿namespace OOP21_wazzle_csharp.Samore
 {
     /// <summary>
     /// This interface provides a method for creating a Grid object.
