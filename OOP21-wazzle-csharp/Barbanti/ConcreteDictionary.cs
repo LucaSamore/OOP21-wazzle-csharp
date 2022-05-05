@@ -1,13 +1,13 @@
 ﻿using OOP21_wazzle_csharp.Samore;
 using System;
 using System.Collections.Generic;
-using System.Text;
 
 namespace OOP21_wazzle_csharp.Barbanti
 {
     /// <summary>
-    /// The implementation of dictionary.
+    /// The dreprecated implementation of dictionary, use <see cref="Dataset"/>.
     /// </summary>
+    [Obsolete("An old Implementation, use Dataset", true)]
     public sealed class ConcreteDictionary : IDataset
     {
         private readonly ISet<string> _words;

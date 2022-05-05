@@ -1,4 +1,5 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
+using OOP21_wazzle_csharp.Samore;
 using System.Collections.Generic;
 
 namespace OOP21_wazzle_csharp.Barbanti.Tests
@@ -24,7 +25,7 @@ namespace OOP21_wazzle_csharp.Barbanti.Tests
                 "BBBBB"
             };
 
-            var dictionary = new ConcreteDictionary(initialDataset);
+            var dictionary = new Dataset(initialDataset);
             var filteredDictionary = new FiveLetterDictionary(dictionary);
 
             Assert.IsTrue(filteredDictionary.Words.SetEquals(targetDataSet));
