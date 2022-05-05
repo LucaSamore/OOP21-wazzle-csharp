@@ -1,4 +1,5 @@
-﻿using System;
+﻿using OOP21_wazzle_csharp.Samore;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -14,11 +15,11 @@ namespace OOP21_wazzle_csharp.Barbanti
         /// Initializes a new instance of the <see cref="FiveLetterDictionary"/> class.
         /// </summary>
         /// <param name="dictionary">The dictionary containing all the words.</param>
-        public FiveLetterDictionary(AbstractDictionary dictionary) : base(dictionary)
+        public FiveLetterDictionary(IDataset dictionary) : base(dictionary)
         {
         }
 
-        public override ISet<string> GetWords() => FilterWords(base.GetWords());
+        public override ISet<string> Words => FilterWords(base.Words);
 
         /// <summary>
         /// Filters the words that are not of lenght five.

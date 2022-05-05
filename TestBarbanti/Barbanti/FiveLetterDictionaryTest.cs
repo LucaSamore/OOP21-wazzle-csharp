@@ -27,7 +27,7 @@ namespace OOP21_wazzle_csharp.Barbanti.Tests
             var dictionary = new ConcreteDictionary(initialDataset);
             var filteredDictionary = new FiveLetterDictionary(dictionary);
 
-            Assert.IsTrue(filteredDictionary.GetWords().SetEquals(targetDataSet));
+            Assert.IsTrue(filteredDictionary.Words.SetEquals(targetDataSet));
         }
     }
 }
