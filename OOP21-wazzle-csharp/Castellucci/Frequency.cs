@@ -27,9 +27,10 @@ namespace OOP21_wazzle_csharp.Castellucci
         public WeightedAlphabet ComputeFrequency()
         {
             var frequencyMap = new Dictionary<char, double>();
+            var result = new Dictionary<char, double>();
             _dataset.Words.SelectMany(w => w.ToList()).ToList().ForEach(c => frequencyMap[c] = frequencyMap.ContainsKey(c) ? frequencyMap[c] + 1 : 1);
-            frequencyMap.ToList().ForEach(p => p = new KeyValuePair<char, double>(p.Key, p.Value / frequencyMap.Values.Sum()));
-            return new WeightedAlphabet(frequencyMap);
+            frequencyMap.ToList().ForEach(p => result.Add(p.Key, p.Value / frequencyMap.Values.Sum()));
+            return new WeightedAlphabet(result);
         }
     }
 }

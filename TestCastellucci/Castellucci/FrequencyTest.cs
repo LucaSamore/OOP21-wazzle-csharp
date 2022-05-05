@@ -5,6 +5,7 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Text;
+using System.Linq;
 
 namespace OOP21_wazzle_csharp.Castellucci.Tests
 {
@@ -26,7 +27,8 @@ namespace OOP21_wazzle_csharp.Castellucci.Tests
             _dictionary.Add('(', 0.0625);
             var weightedAlphabet = new WeightedAlphabet(_dictionary);
             var frequency = new Frequency(_dataset);
-            Assert.AreEqual(_dictionary, frequency.ComputeFrequency().WeightedAlphabetMap);
+            Assert.IsTrue(weightedAlphabet.WeightedAlphabetMap.OrderBy(p => p.Key)
+                .SequenceEqual(frequency.ComputeFrequency().WeightedAlphabetMap.OrderBy(p => p.Key)));
         }
     }
 }
